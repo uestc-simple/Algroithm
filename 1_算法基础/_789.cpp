@@ -7,7 +7,6 @@ int main()
     int n,m,q[N];
     scanf("%d%d",&n,&m);
     for(int i=0;i<n;i++) scanf("%d",&q[i]);
-
     while(m--)
     {
         int x;scanf("%d",&x);
@@ -21,7 +20,7 @@ int main()
         if(q[l]!=x) printf("-1 -1\n");
         else           
         {              
-            printf("%d ",l);
+            printf("%d ",l);//打印左边界
             int l=0,r=n-1;  
             while(l<r)
             {
@@ -29,9 +28,11 @@ int main()
                 if(q[mid]<=x) l=mid;  //确定右边界
                 else r=mid-1;
             }    
-            printf("%d\n",l);  
+            printf("%d\n",l);  //打印右边界
         }
-    }   
-    
+    }      
     return 0;
 }
+
+
+
